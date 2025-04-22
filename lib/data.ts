@@ -31,8 +31,16 @@ export const MY_STACK = {
             icon: '/logo/next.png',
         },
         {
-            name: 'Redux',
-            icon: '/logo/redux.png',
+            name: 'Zustand',
+            icon: '/logo/zustand.svg',
+        },
+        {
+            name: 'React Query',
+            icon: '/logo/react-query.svg'
+        },
+        {
+            name: 'Graphql',
+            icon: '/logo/graphql.svg'
         },
         {
             name: 'Tailwind CSS',
@@ -43,49 +51,9 @@ export const MY_STACK = {
             icon: '/logo/gsap.png',
         },
         {
-            name: 'Frammer Motion',
-            icon: '/logo/framer-motion.png',
-        },
-        {
-            name: 'SASS',
-            icon: '/logo/sass.png',
-        },
-        {
-            name: 'Bootstrap',
-            icon: '/logo/bootstrap.svg',
-        },
-    ],
-    backend: [
-        {
-            name: 'Node.js',
-            icon: '/logo/node.png',
-        },
-        {
-            name: 'Nest.js',
-            icon: '/logo/nest.svg',
-        },
-        {
-            name: 'Express.js',
-            icon: '/logo/express.png',
-        },
-    ],
-    database: [
-        {
-            name: 'MySQL',
-            icon: '/logo/mysql.svg',
-        },
-        {
-            name: 'PostgreSQL',
-            icon: '/logo/postgreSQL.png',
-        },
-        {
-            name: 'MongoDB',
-            icon: '/logo/mongodb.svg',
-        },
-        {
-            name: 'Prisma',
-            icon: '/logo/prisma.png',
-        },
+            name: 'Radix UI',
+            icon: '/logo/radix-ui.svg'
+        }
     ],
     tools: [
         {
@@ -99,6 +67,38 @@ export const MY_STACK = {
         {
             name: 'AWS',
             icon: '/logo/aws.png',
+        },
+        {
+            name: 'Figma',
+            icon: '/logo/figma.svg'
+        },
+        {
+            name: 'Analytics',
+            icon: '/logo/analytics.svg'
+        },
+        {
+            name: 'Mixpanel',
+            icon: '/logo/mixpanel.svg'
+        },
+        {
+            name: 'Sentry',
+            icon: '/logo/sentry.svg'
+        }
+    ],
+    backend: [
+        {
+            name: 'Node.js',
+            icon: '/logo/node.png',
+        },
+        {
+            name: 'Java',
+            icon: '/logo/java.svg',
+        },
+    ],
+    database: [
+        {
+            name: 'MySQL',
+            icon: '/logo/mysql.svg',
         },
     ],
 };
