@@ -43,16 +43,19 @@ const Banner = () => {
                 <div className="max-md:grow max-md:flex flex-col justify-center items-start max-w-[544px]">
                     <h1 className="banner-title slide-up-and-fade leading-[.95] text-6xl sm:text-[80px] font-anton">
                         <span className="text-primary">FRONTEND</span>
-                        <br /> <span className="ml-4">DEVELOPER</span>
+                        <br /> <span className="ml-4">ENGINEER</span>
                     </h1>
                     <p className="banner-description slide-up-and-fade mt-6 text-lg text-muted-foreground">
                         Hi! I&apos;m{' '}
                         <span className="font-medium text-foreground">
                             Dobin Shin
                         </span>
-                        . A creative Frontend Developer with 3+ years of
-                        experience in building high-performance, scalable, and
-                        responsive web solutions.
+                        . A friendly Frontend Engineer with 3+ years.
+                        <br/>
+                        <span>
+                            I enjoy collaborating with my colleagues to solve user needs.
+                        </span>
+                        
                     </p>
                     <Button
                         as="link"
