@@ -16,8 +16,8 @@ Please also note that I did not build this site with the intention of it being a
 First, run the development server:
 
 ```bash
-pnpm install
-pnpm dev
+yarn install
+yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
