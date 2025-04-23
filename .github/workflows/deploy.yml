@@ -27,9 +27,6 @@ jobs:
       - name: Build Project
         run: pnpm run build  # 빌드
 
-      - name: Export Static Site
-        run: pnpm run export  # Next.js의 경우
-
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
