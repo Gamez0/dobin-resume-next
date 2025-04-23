@@ -18,6 +18,7 @@ const Footer = async () => {
                 </a>
 
                 <div className="">
+                    {/* TODO: Fix fetch error and show credit */}
                     {/* <a href='https://www.me.toinfinite.dev/' className="leading-none text-muted-foreground hover:underline hover:text-white">
                         Design & built by Tajmirul Islam <br />
                         Revised by Dobin Shin
