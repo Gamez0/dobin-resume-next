@@ -16,14 +16,22 @@ const Preloader = () => {
                 },
             });
 
+            // 텍스트 애니메이션: 회전하며 나타나고 사라짐
             tl.to('.name-text span', {
                 y: 0,
-                stagger: 0.05,
-                duration: 0.2,
+                rotation: 360,
+                opacity: 1,
+                stagger: 0.1,
+                duration: 0.5,
+            })
+            .to('.name-text span', {
+                opacity: 0,
+                scale: 0.5,
+                duration: 0.3,
             });
 
+            // 막대 애니메이션: 아래로 사라짐
             tl.to('.preloader-item', {
-                delay: 1,
                 y: '100%',
                 duration: 0.5,
                 stagger: 0.1,
@@ -42,16 +50,9 @@ const Preloader = () => {
 
     return (
         <div className="fixed inset-0 z-[6] flex" ref={preloaderRef}>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
+            {[...Array(10)].map((_, i) => (
+                <div key={i} className="preloader-item h-full w-[10%] bg-black" ></div>
+            ))}
 
             <p className="name-text flex text-[20vw] lg:text-[200px] font-anton text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 leading-none overflow-hidden">
                 <span className="inline-block translate-y-full">D</span>
