@@ -107,6 +107,7 @@ const Project = ({ index, project, selectedProject, onMouseEnter }: Props) => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
+            {/* TODO: check below code, doesn't do anything */}
             {selectedProject === null && (
                 <img
                     src={project.thumbnail}

@@ -105,10 +105,10 @@ export const MY_STACK = {
 
 export const PROJECTS: IProject[] = [
     {
-        title: 'Generative AI Service, LAIVE',
+        title: 'Generative AI, LAIVE',
         slug: 'laive',
         liveUrl: 'https://www.laive.io/',
-        year: 2024,
+        period: '2023.08 - 2024.09 (13개월)',
         description: `음악적 지식이 없는 일반인도 AI를 통해 자신이 원하는 음악을 제작할 수 있는 서비스
         `,
         role: `
@@ -136,181 +136,136 @@ export const PROJECTS: IProject[] = [
             'Sentry',
         ],
         thumbnail: '/projects/thumbnail/laive.png',
-        longThumbnail: '',
         images: ['/projects/images/laive-1.png','/projects/images/laive-2.png','/projects/images/laive-3.png','/projects/images/laive-4.png']
     },
     {
-        title: 'MTI Electronics',
-        slug: 'mti-electronics',
-        liveUrl: 'https://mti-electronics.vercel.app/',
-        year: 2025,
-        description: `
-      A complete agency portfolio platform built for MTI Electronics to showcase their services, blog content, and product offerings. <br/> <br/>
-      
-      Key Features:<br/>
-      <ul>
-        <li>🛠️ Service Display System: Interactive service showcase with synchronized sliders</li>
-        <li>✍️ Blog Management: SEO-friendly blog with categorization and search</li>
-        <li>🛒 Product Catalog: Organized product display with filtering capabilities</li>
-        <li>📱 Fully Responsive: Optimized for all device sizes</li>
-        <li>⚡ Fast Performance: Optimized Next.js frontend with ISR (Incremental Static Regeneration)</li>
-      </ul><br/>
-      
-      Technical Highlights:
-      <ul>
-        <li>Implemented complex slider synchronization logic using Swiper.js</li>
-        <li>Customized Payload CMS admin panel for intuitive content management</li>
-        <li>Developed reusable UI components with shadcn for design consistency</li>
-        <li>Configured efficient data fetching strategies in Next.js</li>
-      </ul>
-      `,
+        title: 'Music Streaming, VIODIO',
+        slug: 'viodio',
+        liveUrl: 'https://www.viodio.io/main',
+        period: '2022.08 - 2023.07 (11개월)',
+        description: `AI를 사용해 작곡된 음원을 유통하는 서비스 <br/>외주사에서 기술 스택 선정하지 않고 개발해, 서비스 확장이 불가능했습니다.<br/>
+        각 기술 스택을 하나의 스택으로 전환해 추가 기능 개발이 가능하도록 하였습니다.`,
         role: `
-      Full-Stack Developer <br/>
-      Owned the entire development lifecycle:
-      <ul>
-        <li>✅ Backend: Configured Payload CMS with custom collections for services, blogs, and products</li>
-        <li>🎨 Frontend: Built all UI components using Tailwind CSS and shadcn</li>
-        <li>🔄 State Management: Implemented client-side data fetching and caching</li>
-        <li>🖥️ CMS Customization: Created admin interfaces for content editors</li>
-        <li>🚀 Deployment: Set up CI/CD pipeline for Vercel hosting</li>
-        <li>🧩 Third-Party Integration: Added Swiper.js for interactive sliders</li>
-      </ul>
-      `,
-        techStack: [
+        Frontend-developer<br/>
+        <ul>
+            <li>기존 redux 상태 관리 체계에서 recoil로 전환하여 상태 관리 간소화</li>
+            <li>redirection 및 async 문제를 개선해 lighthouse 점수를 대폭 향상</li>
+            <li>복수의 스타일 시스템을 tailwind css로 통합하여 모바일 반응형 UI를 성공적으로 출시</li>
+            <li>redux thunk를 통해 처리하던 REST API 요청을 react-query로 전환하여 데이터 요청 효율성 증대</li>
+            <li>컨텐츠 제작자인 고객에게 저작권 걱정 없는 음원을 제공하는 기능을 개발하여 b2b 계약 수주에 기여</li>
+        </ul>
+        `,
+        techStack:[
             'Next.js',
-            'Payload CMS',
+            'react-query',
+            'redux',
+            'recoil',
             'Tailwind CSS',
-            'shadcn',
-            'Swiper.js',
-            'React Hook Form',
+            'Custom Component Library',
             'Vercel',
+            'Mixpanel',
+            'Sentry',
         ],
-        thumbnail: '/projects/thumbnail/mti-electronics.webp',
-        longThumbnail: '/projects/long/mti-electronics.webp',
-        images: [
-            '/projects/images/mti-electronics-1.webp',
-            '/projects/images/mti-electronics-2.webp',
-        ],
+        thumbnail: '/projects/thumbnail/viodio.png',
+        images: ['/projects/images/viodio-1.png','/projects/images/viodio-2.png','/projects/images/viodio-3.png']
     },
     {
-        title: 'Epikcart',
-        slug: 'epikcart',
-        techStack: [
-            'React',
-            'Redux',
-            'React i18n',
-            'Tailwind CSS',
-            'Framer Motion',
-            'debouncing',
-            'Api Integration',
-        ],
-        thumbnail: '/projects/thumbnail/epikcart.jpg',
-        longThumbnail: '/projects/long/epikcart.jpg',
-        images: [
-            '/projects/images/epikcart-1.png',
-            '/projects/images/epikcart-2.png',
-            '/projects/images/epikcart-3.png',
-            '/projects/images/epikcart-4.png',
-            '/projects/images/epikcart-5.png',
-        ],
-        liveUrl: 'https://demo.epikcart.siphertech.com/',
-        year: 2023,
-        description: `Epikcart is a feature-rich, scalable e-commerce platform tailored for large businesses. It features dynamic product filtering, multi-language support with RTL, advanced inventory management, order tracking, and refund systems, offering a comprehensive solution for multi-vendor operations.`,
-        role: `As the frontend developer in a team of five, I: <br/>
-        - Built the frontend from scratch using React, Redux, RTK Query, and Tailwind CSS.<br/>
-        - Developed dynamic filtering logic for the product search page with admin-configurable parameters.<br/>
-        - Integrated multi-language support with React i18n, including RTL handling.<br/>
-        - Delivered a responsive, user-friendly interface in collaboration with the UI/UX designer.`,
-    },
-    {
-        title: 'Resume Roaster',
-        slug: 'resume-roaster',
-        techStack: [
-            'GPT-4',
+        title: 'Generative AI Solution for CJ ENM',
+        slug: 'sound-pace',
+        period: '2024.05 - 2024.09 (4개월)',
+        description: `CJ ENM 전용의 음원 생성 AI 서비스<br/>B2B 수주 프로젝트(규모 대외비)`,
+        role: `
+        Frontend-developer<br/>
+        <ul>
+            <li>일관된 디자인을 위해 Radix, ShadCN을 사용해 UI/UX 구현</li>
+            <li>web hook을 이용해 사용자 피드백 수집, 디자인 리뉴얼 진행</li>
+            <li>B2B 추가 요구 사항인 관리자 페이지 및 유저 통제 시스템 개발</li>
+            <li>빠른 운영 및 장애 대응을 위해 CI/CD, Vercel 등을 통한 배포 자동화</li>
+        </ul>
+        `,
+        techStack:[
             'Next.js',
-            'Postgressql',
-            'Prisma',
+            'react-query',
             'Tailwind CSS',
+            'shad-cn',
+            'Vercel',
+            'Mixpanel',
+            'Sentry',
         ],
-        thumbnail: '/projects/thumbnail/resume-roaster.jpg',
-        longThumbnail: '/projects/long/resume-roaster.jpg',
-        images: [
-            '/projects/images/resume-roaster-1.png',
-            '/projects/images/resume-roaster-2.png',
-            '/projects/images/resume-roaster-3.png',
-        ],
-        liveUrl: 'https://resume-roaster.vercel.app/',
-        year: 2023,
-        description:
-            'Resume Roaster is a web application designed to provide tailored resume feedback and professional writing services. Built with Next.js, PostgreSQL, Prisma, and Tailwind CSS, it integrates GPT-4 for AI-powered recommendations. The platform also includes peer-to-peer reviews with a points-based system, fostering a collaborative and engaging experience. Targeting freshers, experienced professionals, and programmers, it helps optimize resumes for job-specific success.',
-        role: `As the sole developer and business owner, I:<br/>
-        - Designed and developed the platform end-to-end using Next.js, PostgreSQL, Prisma, and Tailwind CSS.<br/>
-        - Integrated GPT-4 for AI-driven feedback and insights.<br/>
-        - Implemented complex SQL queries, including one to identify the top two resumes based on user points.`,
+        images: []
     },
     {
-        title: 'Real Estate',
-        slug: 'property-pro',
-        techStack: [
-            'React.js',
-            'Redux',
-            'Tailwind CSS',
-            'React i18n',
-            'Framer Motion',
+        title: 'Pay & Shop, WAPL',
+        slug: 'wapl',
+        period: '2021.07 - 2022.07 (12개월)',
+        description: `간편 결제(Pay)와 매장 POS 시스템(Shop)을 제공하는 서비스`,
+        role: `
+        Frontend-researcher<br/>
+        <br/>
+        Wapl Pay:<br/>
+        <ul>
+            <li>React Native와 Typescript 기반 매장 POS 화면 개발</li>
+            <li>MobX state 관리 라이브러리 사용하여 매장/주문 state 관리</li>
+            <li>jest config 작업, 스냅샷 및 테스트 코드 작성</li>
+            <li>Figma를 통해 UI/UX 소통</li>
+            
+        </ul>
+        <br/>
+        Wapl Shop:<br/>
+        <ul>
+            <li>ElectronJS, React 기반 사내 카페 POS 화면 개발 및 유지 보수</li>
+            <li>MobX state 관리 라이브러리 사용하여 장바구니 state 관리</li>
+            <li>MobX 패턴에 적합하게 컴포넌트 분리하는 리팩토링 작업</li>
+            <li>Node JS를 이용한 DB 쿼리 요청문 작성 및 영수증 출력 구현</li>
+        </ul>
+        `,
+        techStack:[
+            'React-Native',
+            'Electron',
+            'mobx',
+            'Styled-Components',
+            'Node JS',
         ],
-        thumbnail: '/projects/thumbnail/property-pro.jpg',
-        longThumbnail: '/projects/long/property-pro.jpg',
-        images: [
-            '/projects/images/property-pro-1.png',
-            '/projects/images/property-pro-2.png',
-            '/projects/images/property-pro-3.png',
-        ],
-        liveUrl: 'https://demo.propertypro.siphertech.com/',
-        year: 2023,
-        description:
-            'PropertyPro is a real estate management platform offering users a seamless experience to explore, manage, and view property listings. The application emphasizes accessibility and responsive design, ensuring a smooth interface across devices.',
-        role: `As the frontend developer, I:<br/>
-        - Built the frontend using React, Redux, RTK Query, Framer Motion, and Tailwind CSS.<br/>
-        - Integrated dynamic state management for efficient handling of property data.<br/>
-        - Implemented multi-language support with React i18n to cater to diverse audiences.<br/>
-        - Enhanced user interaction with animations and transitions using Framer Motion.`,
+        thumbnail: '/projects/thumbnail/wapl.png',
+        images: ['/projects/images/wapl-1.png','/projects/images/wapl-2.png']
     },
     {
-        title: 'Consulting Finance',
-        slug: 'crenotive',
-        techStack: ['HTML', 'CSS & SCSS', 'Javascript', 'Bootstrap'],
-        thumbnail: '/projects/thumbnail/consulting-finance.jpg',
-        longThumbnail: '/projects/long/consulting-finance.jpg',
-        images: [
-            '/projects/images/consulting-finance-1.png',
-            '/projects/images/consulting-finance-2.png',
-            '/projects/images/consulting-finance-3.png',
+        title: 'Shin-han teller',
+        slug: 'shinhan',
+        period: '2021.02 - 2021.02 (1개월)',
+        description: `신한 텔러뱅킹 홈페이지 개발`,
+        role: `
+        Frontend-researcher<br/>
+        <ul>
+            <li>Home 화면 및 대출 심사 팝업 화면 개발</li>
+        </ul>
+        `,
+        techStack:[
+            'React',
+            'Electron',
+            'And Design of React',
         ],
-        sourceCode: 'https://github.com/Tajmirul/crenotive',
-        liveUrl: 'https://crenotive.netlify.app/',
-        year: 2023,
-        description:
-            'I developed Crenotive, a portfolio website using Html, SASS, and jQuery to showcase services and expertise. The design focuses on responsive user experience and effective presentation of professional achievements.',
-        role: ``,
+        images: []
     },
     {
-        title: 'devLinks',
-        slug: 'devLinks',
-        techStack: ['Next.js', 'Formik', 'Drag & Drop', 'Tailwind CSS'],
-        thumbnail: '/projects/thumbnail/devLinks.jpg',
-        longThumbnail: '/projects/long/devLinks.jpg',
-        images: [
-            '/projects/images/devLinks-1.png',
-            '/projects/images/devLinks-2.png',
-            '/projects/images/devLinks-3.png',
+        title: 'TOP Web Studio',
+        slug: 'top',
+        period: '2021.01 - 2021.06 (6개월)',
+        description: `ES5 기반 웹앱 프레임워크 유지 보수`,
+        role: `
+        Frontend-researcher<br/>
+        <ul>
+            <li>ES5 기반 웹 개발 플랫폼 유지 보수</li>
+            <li>크로스브라우징 작업</li>
+            <li>DatePicker, TableView, TextField Chrome에서 오작동 버그 수정</li>
+            <li>ES5를 이용하여 inputmask 기능 구현</li>
+        </ul>
+        `,
+        techStack:[
+            'ES5',
+            'jQuery',
         ],
-        sourceCode: 'https://github.com/Tajmirul/devsLink',
-        liveUrl: 'https://devlinks-demo.vercel.app/auth/signin',
-        year: 2023,
-        description: `One of the most challenging projects in Frontend Mentor.<br/><br/>
-
-            I developed a LinkSharing App as part of the Frontend Mentor challenge, utilizing React, Redux, and Tailwind CSS to create a responsive and feature-rich platform. The app allows users to share, save, and explore links, with a focus on intuitive design and smooth navigation. Advanced state management ensures efficient data handling for user interactions.`,
-        role: ``,
+        images: []
     },
 ];
 
