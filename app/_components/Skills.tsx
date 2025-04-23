@@ -7,6 +7,8 @@ import { ScrollTrigger } from 'gsap/all';
 import Image from 'next/image';
 import React, { useRef } from 'react';
 
+const basePath = process.env.NODE_ENV === 'production' ? '/dobin-resume-next' : '';
+
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const Skills = () => {
@@ -79,7 +81,7 @@ const Skills = () => {
                                     >
                                         <div>
                                             <img
-                                                src={item.icon}
+                                                src={`${basePath + item.icon}`}
                                                 alt={item.name}
                                                 width="40"
                                                 height="40"
