@@ -3,10 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # main 브랜치에 푸시할 때마다 배포를 실행
+      - main
 
 permissions:
-  contents: write  # 배포를 위해 필요한 권한
+  contents: write
 
 jobs:
   deploy:
@@ -19,16 +19,19 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 7  # 원하는 pnpm 버전
+          version: 7
 
       - name: Install Dependencies
-        run: pnpm install  # pnpm을 사용해 의존성 설치
+        run: pnpm install
 
       - name: Build Project
-        run: pnpm run build  # 빌드
+        run: pnpm run build
+
+      - name: Add .nojekyll
+        run: touch out/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: out  # 빌드 결과물이 담길 폴더
+          folder: out
