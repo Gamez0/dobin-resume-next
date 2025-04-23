@@ -77,14 +77,15 @@ const AboutMe = () => {
                                 <br/>
                                 As an engineer, I believe that begins with using my skills to address the real problems faced by customers and teammates.
                             </p>
-                            <p className="mt-3 slide-up-and-fade">
+                            {/* TODO: More Detail if I want */}
+                            {/* <p className="mt-3 slide-up-and-fade">
                                 My approach focuses on creating scalable,
                                 high-performing solutions tailored to both user
                                 needs and business objectives. By prioritizing
                                 performance, accessibility, and responsiveness,
                                 I strive to deliver experiences that not only
                                 engage users but also drive tangible results.
-                            </p>
+                            </p> */}
                         </div>
                     </div>
                 </div>
