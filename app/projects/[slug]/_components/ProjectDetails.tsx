@@ -154,7 +154,7 @@ const ProjectDetails = ({ project }: Props) => {
                                     Description
                                 </p>
 
-                                <div className="text-lg prose-xl markdown-text">
+                                <div className="text-lg markdown-text">
                                     {parse(project.description)}
                                 </div>
                             </div>
@@ -164,9 +164,10 @@ const ProjectDetails = ({ project }: Props) => {
                                         My Role
                                     </p>
 
-                                    <div className="text-lg">
+                                    <div className="text-lg markdown-text">
                                         {parse(project.role)}
                                     </div>
+                                    <br/><br/><br/><br/><br/>
                                 </div>
                             )}
                         </div>

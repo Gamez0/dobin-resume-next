@@ -105,6 +105,41 @@ export const MY_STACK = {
 
 export const PROJECTS: IProject[] = [
     {
+        title: 'Generative AI Service, LAIVE',
+        slug: 'laive',
+        liveUrl: 'https://www.laive.io/',
+        year: 2024,
+        description: `음악적 지식이 없는 일반인도 AI를 통해 자신이 원하는 음악을 제작할 수 있는 서비스
+        `,
+        role: `
+        Frontend-developer (Project Manager) <br/>
+        <ul>
+            <li>AI 음원을 제작 하는 서비스의 프론트 개발 및 PM 담당</li>
+            <li>UI/UX 기획에도 참여하여 빠른 개발 및 협업 진행</li>
+            <li>디자이너 및 개발자간 협업을 위해 Atomic Design 원칙 도입하여 디자인 소요 시간 2배 이상 감축</li>
+            <li>tailwind, clsx 등으로 모바일 친화적 UI를 구현하여 60%이상 모바일 유저 확보</li>
+            <li>sentry, CI/CD 등을 이용하여 error pipeline 구축, 1분 이내 reporting 구현해 장애율 감소</li>
+            <li>사용자 경험을 떨어뜨리는 장애 대응을 위해 vercel env 사용해 식별 후 5분 이내 대응 수단 구축</li>
+            <li>마케팅 팀 요구 사항에 능동적으로 대처해 mixpanel, funnel 기능을 통해 CTR(click through ratio) 4.03배 증가</li>
+            <li>next js의 ISR rendering 으로 스트리밍 속도 이슈 개선을 통해 83% 지연 감소</li>
+            <li>리뷰를 통해 동료를 도와 성능 문제를 O(n^3)에서 O(mn^2)로 해결</li>
+        </ul>
+        `,
+        techStack:[
+            'Next.js',
+            'react-query',
+            'zustand',
+            'Tailwind CSS',
+            'shad-cn',
+            'Vercel',
+            'Mixpanel',
+            'Sentry',
+        ],
+        thumbnail: '/projects/thumbnail/laive.png',
+        longThumbnail: '',
+        images: ['/projects/images/laive-1.png','/projects/images/laive-2.png','/projects/images/laive-3.png','/projects/images/laive-4.png']
+    },
+    {
         title: 'MTI Electronics',
         slug: 'mti-electronics',
         liveUrl: 'https://mti-electronics.vercel.app/',
