@@ -55,9 +55,7 @@ const AboutMe = () => {
         <section className="pb-section" id="about-me">
             <div className="container" ref={container}>
                 <h2 className="text-4xl md:text-6xl font-thin mb-20 slide-up-and-fade">
-                    I believe in a user centered design approach, ensuring that
-                    every project I work on is tailored to meet the specific
-                    needs of its users.
+                I hope to be someone who opens my hand to help, not someone who is tightfisted toward others.
                 </h2>
 
                 <p className="pb-3 border-b text-muted-foreground slide-up-and-fade">
@@ -73,8 +71,8 @@ const AboutMe = () => {
                     <div className="md:col-span-7">
                         <div className="text-lg text-muted-foreground max-w-[450px]">
                             <p className="slide-up-and-fade">
-                                I hope to be someone who opens my hand to help, not someone who is tightfisted toward others.
-                                <br/>
+                                {/* I hope to be someone who opens my hand to help, not someone who is tightfisted toward others.
+                                <br/> */}
                                 As an engineer, I believe that begins with using my skills to address the real problems faced by customers and teammates.
                             </p>
                             {/* TODO: More Detail if I want */}
