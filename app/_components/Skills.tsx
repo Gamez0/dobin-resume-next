@@ -78,7 +78,7 @@ const Skills = () => {
                                         key={item.name}
                                     >
                                         <div>
-                                            <Image
+                                            <img
                                                 src={item.icon}
                                                 alt={item.name}
                                                 width="40"
