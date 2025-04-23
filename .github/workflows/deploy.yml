@@ -16,23 +16,22 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
         with:
-          node-version: 18
-          cache: npm
+          version: 7  # 원하는 pnpm 버전
 
       - name: Install Dependencies
-        run: npm install
+        run: pnpm install  # pnpm을 사용해 의존성 설치
 
       - name: Build Project
-        run: npm run build  # 빌드 결과물 생성
+        run: pnpm run build  # 빌드
 
       - name: Export Static Site
-        run: npm run export  # static HTML로 내보내기 (out 폴더에 생성)
+        run: pnpm run export  # Next.js의 경우
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages   # `gh-pages` 브랜치에 배포
-          folder: out        # 빌드 결과물이 들어 있는 폴더 (Next.js의 기본 export 폴더)
+          branch: gh-pages
+          folder: out  # 빌드 결과물이 담길 폴더
