@@ -10,7 +10,6 @@
         "lint": "next lint",
         "export": "next export",
         "svgr:icons": "svgr --title-prop --no-dimensions --typescript -d components/icons -- components/icons/svgs",
-        "predeploy": "pnpm build",
         "deploy": "gh-pages -d out"
     },
     "dependencies": {
