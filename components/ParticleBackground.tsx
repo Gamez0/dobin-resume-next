@@ -10,9 +10,13 @@ const ParticleBackground = () => {
 
     useGSAP(() => {
         particlesRef.current.forEach((particle) => {
+            const randomColor = `hsl(${Math.random() * 360}, 70%, 80%)`; // 랜덤한 색상
+            const randomSize = Math.random() * 5 + 2; // 크기 범위 확장
+
             gsap.set(particle, {
-                width: Math.random() * 3 + 1,
-                height: Math.random() * 3 + 1,
+                width: randomSize,
+                height: randomSize,
+                borderRadius: '50%', // 둥근 모양 유지
                 opacity: Math.random(),
                 left: Math.random() * window.innerWidth,
                 top: Math.random() * (window.innerHeight + 1),
@@ -20,18 +24,17 @@ const ParticleBackground = () => {
 
             gsap.to(particle, {
                 y: window.innerHeight,
-                duration: Math.random() * 10 + 10,
+                duration: Math.random() * 15 + 5, // 속도 다양화
                 opacity: 0,
                 repeat: -1,
-                ease: 'none',
-                // yoyo: true,
+                ease: 'power1.inOut', // 부드러운 움직임
             });
         });
     }, []);
 
     return (
         <div className="fixed inset-0 z-0 pointer-events-none">
-            {[...Array(100)].map((_, i) => (
+            {[...Array(100)].map((_, i) => ( // 입자 수 증가
                 <div
                     key={i}
                     ref={(el) => {
