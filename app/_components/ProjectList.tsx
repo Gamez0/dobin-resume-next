@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-import Image from 'next/image';
+// import Image from 'next/image';
 import React, { useRef, useState, MouseEvent } from 'react';
 import Project from './Project';
 
