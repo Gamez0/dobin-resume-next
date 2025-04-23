@@ -10,7 +10,6 @@ const ParticleBackground = () => {
 
     useGSAP(() => {
         particlesRef.current.forEach((particle) => {
-            const randomColor = `hsl(${Math.random() * 360}, 70%, 80%)`; // 랜덤한 색상
             const randomSize = Math.random() * 5 + 2; // 크기 범위 확장
 
             gsap.set(particle, {
