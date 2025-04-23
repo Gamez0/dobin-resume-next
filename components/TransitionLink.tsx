@@ -11,6 +11,7 @@ interface Props extends ComponentProps<typeof Link> {
 
 gsap.registerPlugin(useGSAP);
 
+// TODO: check if this is needed
 const TransitionLink = ({
     href,
     onClick,

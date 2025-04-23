@@ -6,6 +6,7 @@ import gsap from 'gsap';
 gsap.registerPlugin(useGSAP);
 
 export default function Template({ children }: { children: React.ReactNode }) {
+    // 페이지 전환 애니메이션
     useGSAP(() => {
         const tl = gsap.timeline();
 

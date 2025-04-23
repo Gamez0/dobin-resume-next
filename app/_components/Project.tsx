@@ -33,6 +33,7 @@ gsap.registerPlugin(useGSAP);
 const Project = ({ index, project, selectedProject, onMouseEnter }: Props) => {
     const externalLinkSVGRef = useRef<SVGSVGElement>(null);
 
+    // 링크 svg icon 애니메이션
     const { context, contextSafe } = useGSAP(() => {}, {
         scope: externalLinkSVGRef,
         revertOnUpdate: true,

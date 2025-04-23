@@ -10,6 +10,7 @@ const ArrowAnimation = () => {
     const arrow1Ref = useRef<SVGPathElement>(null);
     const arrow2Ref = useRef<SVGPathElement>(null);
 
+    // 스크롤 유도 애니메이션
     useGSAP(() => {
         gsap.set('#banner-arrow-svg', { fill: 'transparent', autoAlpha: 0 });
         gsap.set('.svg-arrow-1', {
@@ -32,7 +33,7 @@ const ArrowAnimation = () => {
         tl.to('#banner-arrow-svg', {
             duration: 0.5,
             delay: 0.5,
-            fill: '#ffffff08',
+            fill: '#ffffff09',
         });
         tl.to('#banner-arrow-svg', {
             duration: 1,
