@@ -1,0 +1,38 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # main 브랜치에 푸시할 때마다 배포를 실행
+
+permissions:
+  contents: write  # 배포를 위해 필요한 권한
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Project
+        run: npm run build  # 빌드 결과물 생성
+
+      - name: Export Static Site
+        run: npm run export  # static HTML로 내보내기 (out 폴더에 생성)
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages   # `gh-pages` 브랜치에 배포
+          folder: out        # 빌드 결과물이 들어 있는 폴더 (Next.js의 기본 export 폴더)
