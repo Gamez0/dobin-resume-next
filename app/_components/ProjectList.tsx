@@ -76,6 +76,7 @@ const ProjectList = () => {
         { scope: containerRef, dependencies: [containerRef.current] },
     );
 
+    // fade in the project list
     useGSAP(
         () => {
             const tl = gsap.timeline({
