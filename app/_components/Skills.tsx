@@ -31,7 +31,7 @@ const Skills = () => {
             });
 
             tl.from('.slide-up', {
-                opacity: 0,
+                opacity: 0.1,
                 y: 40,
                 ease: 'none',
                 stagger: 0.4,
