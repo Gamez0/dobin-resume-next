@@ -109,6 +109,30 @@ export const MY_STACK = {
 
 export const PROJECTS: IProject[] = [
     {
+        // 상생패이벡
+        title: '상생페이백',
+        slug: 'sspb',
+        liveUrl: 'https://xn--3h3bl7foc243a8lq.kr/',
+        period: '2025.06 - 현재 (4개월)',
+        description: '',
+        role: 'Frontend Team Lead',
+        techStack: [],
+        thumbnail: '',
+        images: [],
+    },
+    {
+        // 신한 모바일 리뉴얼
+        title: '신한은행 모바일 리뉴얼',
+        slug: 'shinhan-renewal',
+        liveUrl: 'https://m.shinhan.com/',
+        period: '2025.05 - 2025.06 (1개월)',
+        description: '',
+        role: 'Frontend Developer',
+        techStack: [],
+        thumbnail: '',
+        images: [],
+    },
+    {
         title: 'Generative AI, LAIVE',
         slug: 'laive',
         liveUrl: 'https://www.laive.io/',
