@@ -61,7 +61,7 @@ export default {
                 sm: 'calc(var(--radius) - 4px)',
             },
             fontFamily: {
-                anton: ['var(--font-anton)'],
+                anton: ['var(--font-anton)', 'var(--font-black-han-sans)'],
                 'roboto-flex': ['var(--font-roboto-flex)'],
             },
             padding: {

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Anton, Roboto_Flex } from 'next/font/google';
+import { Anton, Roboto_Flex, Black_Han_Sans } from 'next/font/google';
 import { ReactLenis } from 'lenis/react';
 
 import 'lenis/dist/lenis.css';
@@ -17,6 +17,13 @@ const antonFont = Anton({
     style: 'normal',
     subsets: ['latin'],
     variable: '--font-anton',
+});
+
+const blackHanSans = Black_Han_Sans({
+    weight: '400',
+    style: 'normal',
+    subsets: ['latin'],
+    variable: '--font-black-han-sans',
 });
 
 const robotoFlex = Roboto_Flex({
@@ -39,7 +46,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${antonFont.variable} ${robotoFlex.variable} antialiased`}
+                className={`${antonFont.variable} ${blackHanSans.variable} ${robotoFlex.variable} antialiased`}
             >
                 <ReactLenis
                     root
