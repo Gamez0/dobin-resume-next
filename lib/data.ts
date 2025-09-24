@@ -275,9 +275,9 @@ export const PROJECTS: IProject[] = [
 
 export const MY_EXPERIENCE = [
     {
-        title: 'Frontend Engineer',
-        company: '',
-        duration: 'Oct 2024 - Present',
+        title: 'Frontend Team Lead (Freelance)',
+        company: 'Seeroo Info',
+        duration: 'May 2025 - Present',
     },
     {
         title: 'Frontend Developer',
