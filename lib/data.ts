@@ -31,6 +31,10 @@ export const MY_STACK = {
             icon: '/logo/next.png',
         },
         {
+            name: 'React Router',
+            icon: '/logo/react-router.svg',
+        },
+        {
             name: 'Zustand',
             icon: '/logo/zustand.svg',
         },
