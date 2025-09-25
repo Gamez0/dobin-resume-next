@@ -116,10 +116,23 @@ export const PROJECTS: IProject[] = [
         period: '2025.06 - 현재 (4개월)',
         description: '',
         role: 'Frontend Team Lead',
-        techStack: [],
-        thumbnail: '',
+        techStack: ['React Router', 'zustand', 'react-query', 'Tailwind CSS', 'shad-cn'],
+        thumbnail: '/projects/thumbnail/sspb.png',
         images: [],
     },
+    {
+        // 포켓로그
+        title: 'PokéRogue',
+        slug: 'pokerogue',
+        liveUrl: 'https://pokerogue.net/',
+        period: '2025.06 - 2025.07 (1개월)',
+        description: '',
+        role: 'Contributor',
+        techStack: ['phaser', 'vite', 'vitest'],
+        thumbnail: '/projects/thumbnail/pokerogue.png',
+        images: [],
+    },
+
     {
         // 신한 모바일 리뉴얼
         title: '신한은행 모바일 리뉴얼',
@@ -128,9 +141,9 @@ export const PROJECTS: IProject[] = [
         period: '2025.05 - 2025.06 (1개월)',
         description: '',
         role: 'Frontend Developer',
-        techStack: [],
-        thumbnail: '',
-        images: [],
+        techStack: ['Next.js', 'react-query', 'Tailwind CSS', 'Mono Repo'],
+        thumbnail: '/projects/thumbnail/shinhan-renewal.png',
+        images: [''],
     },
     {
         title: 'Generative AI, LAIVE',
