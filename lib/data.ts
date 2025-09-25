@@ -114,8 +114,17 @@ export const PROJECTS: IProject[] = [
         slug: 'sspb',
         liveUrl: 'https://xn--3h3bl7foc243a8lq.kr/',
         period: '2025.06 - 현재 (4개월)',
-        description: '',
-        role: 'Frontend Team Lead',
+        description: '정부가 카드 소비를 촉진하고 소상공인을 지원하기 위해 시행하는 환급(페이백) 제도<br/>2024년 월평균 카드소비액과 비교해서, 2025년 9~11월 동안 카드 소비가 더 많아진 금액의 일부를 디지털 온누리상품권 형태로 돌려주는 사업',
+        role: `Frontend Team Lead<br/>
+        <ul>
+            <li>정부 지원 소비 환급 서비스 「상생페이백」 프론트엔드 총괄</li>
+            <li>오픈 첫 주, 일 평균 80만 명 신청 및 동시 수십만 명 접속 트래픽을 무중단 서비스로 안정적으로 처리</li>
+            <li>React 기반 대규모 사용자 대상 서비스 개발 및 출시 (수백만 사용자 동시 접속 대응)</li>
+            <li>대규모 트래픽(동시 수십만 명 접속)에 대응하기 위해 CDN·캐싱·Lazy Loading·코드 스플리팅 등 성능 최적화 전략</li>
+            <li>프론트엔드 아키텍처 설계, 공통 모듈/컴포넌트 관리, 성능 최적화</li>
+            <li>2025년 9월 25일 기준, 누적 신청자 837만 명 돌파</li>
+        </ul>
+        `,
         techStack: ['React Router', 'zustand', 'react-query', 'Tailwind CSS', 'shad-cn'],
         thumbnail: '/projects/thumbnail/sspb.png',
         images: [],
@@ -153,7 +162,7 @@ export const PROJECTS: IProject[] = [
         description: `음악적 지식이 없는 일반인도 AI를 통해 자신이 원하는 음악을 제작할 수 있는 서비스
         `,
         role: `
-        Frontend-developer (Project Manager) <br/>
+        Frontend-developer<br/>
         <ul>
             <li>AI 음원을 제작 하는 서비스의 프론트 개발 및 PM 담당</li>
             <li>UI/UX 기획에도 참여하여 빠른 개발 및 협업 진행</li>
