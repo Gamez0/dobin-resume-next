@@ -127,7 +127,7 @@ export const PROJECTS: IProject[] = [
         `,
         techStack: ['React Router', 'zustand', 'react-query', 'Tailwind CSS', 'shad-cn'],
         thumbnail: '/projects/thumbnail/sspb.png',
-        images: [],
+        images: ['/projects/images/sspb-1.png','/projects/images/sspb-2.png','/projects/images/sspb-3.png'],
     },
     {
         // 포켓로그
