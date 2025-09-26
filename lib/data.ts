@@ -139,13 +139,29 @@ export const PROJECTS: IProject[] = [
         slug: 'pokerogue',
         liveUrl: 'https://pokerogue.net/',
         period: '2025.06 - 2025.07 (1개월)',
-        description: '',
+        description: `
+        <ul>
+            <li>오픈소스 로그라이크 게임 프로젝트. 포켓몬 컨셉을 기반으로, 무작위 던전과 전략적 전투를 결합한 브라우저 게임.</li>
+            <li>게임 메커니즘과 UI 개선에 기여하며 플레이어 경험 향상과 안정성 개선에 참여.</li>
+        </ul>
+        <br/>
+        게임 내 UI/UX 개선
+        <ul>
+            <li>플레이어가 새로운 기술을 배우지 않으려 할 때 default 선택 값을 NO로 수정</li>
+            <li><a href="https://github.com/pagefaultgames/pokerogue/pull/5924" target="_blank" style="text-decoration: underline;">PR Link</a></li>
+        </ul>
+        <br/>
+        버그 수정
+        <ul>
+            <li>특수 효과가 정해진 순서에 맞게 진행되지 않는 현상 수정</li>
+            <li><a href="https://github.com/pagefaultgames/pokerogue/pull/5936" target="_blank" style="text-decoration: underline;">PR Link</a></li>
+        </ul>
+        `,
         role: 'Contributor',
         techStack: ['phaser', 'vite', 'vitest'],
         thumbnail: '/projects/thumbnail/pokerogue.png',
-        images: [],
+        images: ['/projects/images/pokerogue-1.png','/projects/images/pokerogue-2.png'],
     },
-
     {
         // 신한 모바일 리뉴얼
         title: '신한은행 모바일 리뉴얼',
