@@ -57,6 +57,10 @@ export const MY_STACK = {
         {
             name: 'Radix UI',
             icon: '/logo/radix-ui.svg'
+        },
+        {
+            name: 'Phaser',
+            icon: '/logo/phaser.png'
         }
     ],
     tools: [
