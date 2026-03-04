@@ -12,6 +12,8 @@ import CustomCursor from '@/components/CustomCursor';
 import Preloader from '../components/Preloader';
 import StickyEmail from './_components/StickyEmail';
 
+import { Analytics } from "@vercel/analytics/next"
+
 const antonFont = Anton({
     weight: '400',
     style: 'normal',
@@ -65,6 +67,7 @@ export default function RootLayout({
                     <ParticleBackground />
                     <StickyEmail />
                 </ReactLenis>
+                <Analytics />
             </body>
         </html>
     );
