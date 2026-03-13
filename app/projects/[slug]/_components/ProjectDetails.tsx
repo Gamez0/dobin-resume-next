@@ -13,8 +13,6 @@ interface Props {
     project: IProject;
 }
 
-const basePath = process.env.NODE_ENV === 'production' ? '/dobin-resume-next' : '';
-
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const ProjectDetails = ({ project }: Props) => {
@@ -187,14 +185,14 @@ const ProjectDetails = ({ project }: Props) => {
                             key={image}
                             className="group relative w-full aspect-[750/400] bg-background-light"
                             style={{
-                                backgroundImage: `url(${basePath + image})`,
+                                backgroundImage: `url(${image})`,
                                 backgroundSize: 'cover',
                                 backgroundPosition: 'center 50%',
                                 backgroundRepeat: 'no-repeat',
                             }}
                         >
                             <a
-                                href={`${basePath + image}`}
+                                href={image}
                                 target="_blank"
                                 className="absolute top-4 right-4 bg-background/70 text-foreground size-12 inline-flex justify-center items-center transition-all opacity-0 hover:bg-primary hover:text-primary-foreground group-hover:opacity-100"
                             >
