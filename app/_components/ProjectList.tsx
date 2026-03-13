@@ -9,8 +9,6 @@ import { ScrollTrigger } from 'gsap/all';
 import React, { useRef, useState, MouseEvent } from 'react';
 import Project from './Project';
 
-const basePath = process.env.NODE_ENV === 'production' ? '/dobin-resume-next' : '';
-
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const ProjectList = () => {
@@ -120,7 +118,7 @@ const ProjectList = () => {
                             {PROJECTS.map((project) => (
                                 project.thumbnail && (
                                     <img
-                                        src={`${basePath + project.thumbnail}`}
+                                        src={project.thumbnail}
                                         alt="Project"
                                         width="400"
                                         height="500"
