@@ -10,9 +10,9 @@ import ParticleBackground from '@/components/ParticleBackground';
 import Navbar from '@/components/Navbar';
 import CustomCursor from '@/components/CustomCursor';
 import Preloader from '../components/Preloader';
-import StickyEmail from './_components/StickyEmail';
+import StickyEmail from './containers/StickyEmail';
 
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from '@vercel/analytics/next';
 
 const antonFont = Anton({
     weight: '400',
