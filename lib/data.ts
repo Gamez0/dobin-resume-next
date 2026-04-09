@@ -8,7 +8,10 @@ export const GENERAL_INFO = {
 
 export const SOCIAL_LINKS = [
     { name: 'github', url: 'https://github.com/Gamez0' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/%EB%8F%84%EB%B9%88-%EC%8B%A0-431aab200/' },
+    {
+        name: 'linkedin',
+        url: 'https://www.linkedin.com/in/%EB%8F%84%EB%B9%88-%EC%8B%A0-431aab200/',
+    },
     // { name: 'facebook', url: 'https://www.facebook.com/tajmirul.2000' },
 ];
 
@@ -40,11 +43,11 @@ export const MY_STACK = {
         },
         {
             name: 'React Query',
-            icon: '/logo/react-query.svg'
+            icon: '/logo/react-query.svg',
         },
         {
             name: 'Graphql',
-            icon: '/logo/graphql.svg'
+            icon: '/logo/graphql.svg',
         },
         {
             name: 'Tailwind CSS',
@@ -56,12 +59,12 @@ export const MY_STACK = {
         },
         {
             name: 'Radix UI',
-            icon: '/logo/radix-ui.svg'
+            icon: '/logo/radix-ui.svg',
         },
         {
             name: 'Phaser',
-            icon: '/logo/phaser.png'
-        }
+            icon: '/logo/phaser.png',
+        },
     ],
     tools: [
         {
@@ -78,20 +81,20 @@ export const MY_STACK = {
         },
         {
             name: 'Figma',
-            icon: '/logo/figma.svg'
+            icon: '/logo/figma.svg',
         },
         {
             name: 'Analytics',
-            icon: '/logo/analytics.svg'
+            icon: '/logo/analytics.svg',
         },
         {
             name: 'Mixpanel',
-            icon: '/logo/mixpanel.svg'
+            icon: '/logo/mixpanel.svg',
         },
         {
             name: 'Sentry',
-            icon: '/logo/sentry.svg'
-        }
+            icon: '/logo/sentry.svg',
+        },
     ],
     backend: [
         {
@@ -118,7 +121,8 @@ export const PROJECTS: IProject[] = [
         slug: 'sspb',
         liveUrl: 'https://xn--3h3bl7foc243a8lq.kr/',
         period: '2025.06 - 현재 (4개월)',
-        description: '정부가 카드 소비를 촉진하고 소상공인을 지원하기 위해 시행하는 환급(페이백) 제도<br/>2024년 월평균 카드소비액과 비교해서, 2025년 9~11월 동안 카드 소비가 더 많아진 금액의 일부를 디지털 온누리상품권 형태로 돌려주는 사업',
+        description:
+            '정부가 카드 소비를 촉진하고 소상공인을 지원하기 위해 시행하는 환급(페이백) 제도<br/>2024년 월평균 카드소비액과 비교해서, 2025년 9~11월 동안 카드 소비가 더 많아진 금액의 일부를 디지털 온누리상품권 형태로 돌려주는 사업',
         role: `Frontend Team Lead<br/>
         <ul>
             <li>정부 지원 소비 환급 서비스 「상생페이백」 프론트엔드 총괄</li>
@@ -129,9 +133,19 @@ export const PROJECTS: IProject[] = [
             <li>2025년 9월 25일 기준, 누적 신청자 837만 명 돌파</li>
         </ul>
         `,
-        techStack: ['React Router', 'zustand', 'react-query', 'Tailwind CSS', 'shad-cn'],
+        techStack: [
+            'React Router',
+            'zustand',
+            'react-query',
+            'Tailwind CSS',
+            'shad-cn',
+        ],
         thumbnail: '/projects/thumbnail/sspb.png',
-        images: ['/projects/images/sspb-1.png','/projects/images/sspb-2.png','/projects/images/sspb-3.png'],
+        images: [
+            '/projects/images/sspb-1.png',
+            '/projects/images/sspb-2.png',
+            '/projects/images/sspb-3.png',
+        ],
     },
     {
         // 포켓로그
@@ -160,7 +174,10 @@ export const PROJECTS: IProject[] = [
         role: 'Contributor',
         techStack: ['phaser', 'vite', 'vitest'],
         thumbnail: '/projects/thumbnail/pokerogue.png',
-        images: ['/projects/images/pokerogue-1.png','/projects/images/pokerogue-2.png'],
+        images: [
+            '/projects/images/pokerogue-1.png',
+            '/projects/images/pokerogue-2.png',
+        ],
     },
     {
         // 신한 모바일 리뉴얼
@@ -195,7 +212,7 @@ export const PROJECTS: IProject[] = [
             <li>리뷰를 통해 동료를 도와 성능 문제를 O(n^3)에서 O(mn^2)로 해결</li>
         </ul>
         `,
-        techStack:[
+        techStack: [
             'Next.js',
             'react-query',
             'zustand',
@@ -206,7 +223,12 @@ export const PROJECTS: IProject[] = [
             'Sentry',
         ],
         thumbnail: '/projects/thumbnail/laive.png',
-        images: ['/projects/images/laive-1.png','/projects/images/laive-2.png','/projects/images/laive-3.png','/projects/images/laive-4.png']
+        images: [
+            '/projects/images/laive-1.png',
+            '/projects/images/laive-2.png',
+            '/projects/images/laive-3.png',
+            '/projects/images/laive-4.png',
+        ],
     },
     {
         title: 'Music Streaming, VIODIO',
@@ -225,7 +247,7 @@ export const PROJECTS: IProject[] = [
             <li>컨텐츠 제작자인 고객에게 저작권 걱정 없는 음원을 제공하는 기능을 개발하여 b2b 계약 수주에 기여</li>
         </ul>
         `,
-        techStack:[
+        techStack: [
             'Next.js',
             'react-query',
             'redux',
@@ -237,7 +259,11 @@ export const PROJECTS: IProject[] = [
             'Sentry',
         ],
         thumbnail: '/projects/thumbnail/viodio.png',
-        images: ['/projects/images/viodio-1.png','/projects/images/viodio-2.png','/projects/images/viodio-3.png']
+        images: [
+            '/projects/images/viodio-1.png',
+            '/projects/images/viodio-2.png',
+            '/projects/images/viodio-3.png',
+        ],
     },
     {
         title: 'Generative AI Solution for CJ ENM',
@@ -253,7 +279,7 @@ export const PROJECTS: IProject[] = [
             <li>빠른 운영 및 장애 대응을 위해 CI/CD, Vercel 등을 통한 배포 자동화</li>
         </ul>
         `,
-        techStack:[
+        techStack: [
             'Next.js',
             'react-query',
             'Tailwind CSS',
@@ -262,7 +288,7 @@ export const PROJECTS: IProject[] = [
             'Mixpanel',
             'Sentry',
         ],
-        images: []
+        images: [],
     },
     {
         title: 'Pay & Shop, WAPL',
@@ -289,7 +315,7 @@ export const PROJECTS: IProject[] = [
             <li>Node JS를 이용한 DB 쿼리 요청문 작성 및 영수증 출력 구현</li>
         </ul>
         `,
-        techStack:[
+        techStack: [
             'React-Native',
             'Electron',
             'mobx',
@@ -297,7 +323,7 @@ export const PROJECTS: IProject[] = [
             'Node JS',
         ],
         thumbnail: '/projects/thumbnail/wapl.png',
-        images: ['/projects/images/wapl-1.png','/projects/images/wapl-2.png']
+        images: ['/projects/images/wapl-1.png', '/projects/images/wapl-2.png'],
     },
     {
         title: 'Shin-han teller',
@@ -310,12 +336,8 @@ export const PROJECTS: IProject[] = [
             <li>Home 화면 및 대출 심사 팝업 화면 개발</li>
         </ul>
         `,
-        techStack:[
-            'React',
-            'Electron',
-            'And Design of React',
-        ],
-        images: []
+        techStack: ['React', 'Electron', 'And Design of React'],
+        images: [],
     },
     {
         title: 'TOP Web Studio',
@@ -331,11 +353,8 @@ export const PROJECTS: IProject[] = [
             <li>ES5를 이용하여 inputmask 기능 구현</li>
         </ul>
         `,
-        techStack:[
-            'ES5',
-            'jQuery',
-        ],
-        images: []
+        techStack: ['ES5', 'jQuery'],
+        images: [],
     },
 ];
 
@@ -354,5 +373,141 @@ export const MY_EXPERIENCE = [
         title: 'Frontend Researcher',
         company: 'Tmax',
         duration: 'Jan 2021 - Jul 2022',
+    },
+];
+
+export const SKILL_MATRIX_LEVELS = {
+    achieved: { label: '실적 있음', color: '#22c55e', bg: '#22c55e18' },
+    experienced: { label: '실무 경험', color: '#3b82f6', bg: '#3b82f618' },
+    learning: { label: '학습', color: '#a78bfa', bg: '#a78bfa18' },
+};
+
+export interface SkillMatrixCategory {
+    id: 'efficiency' | 'launch' | 'optimization';
+    tab: '개발 효율화' | '프로덕트 경험 (출시)' | '프로덕트 경험 (최적화)';
+    description: string;
+    categories: {
+        name: string;
+        detail: string;
+        level: 'achieved' | 'experienced' | 'learning';
+    }[];
+}
+
+export const SKILL_MATRIX_DATA: SkillMatrixCategory[] = [
+    {
+        id: 'efficiency',
+        tab: '개발 효율화',
+        description: '더 나은 개발 환경과 코드 품질을 만드는 경험',
+        categories: [
+            {
+                name: '코드 품질',
+                level: 'achieved',
+                detail: '컨벤션, 코드 리뷰 체계, 아키텍처 설계',
+            },
+            {
+                name: '테스트',
+                level: 'learning',
+                detail: '유닛 테스트, 통합 테스트, E2E, 자동화',
+            },
+            {
+                name: '빌드 / 배포',
+                level: 'achieved',
+                detail: 'CI/CD 파이프라인, 빌드 최적화, 모노레포',
+            },
+            {
+                name: '개발자 경험 (DX)',
+                level: 'experienced',
+                detail: '내부 도구, 보일러플레이트, 환경 세팅 자동화',
+            },
+            {
+                name: '공통화 / 시스템화',
+                level: 'experienced',
+                detail: '디자인 시스템, 공통 컴포넌트, 유틸 패키지',
+            },
+            {
+                name: '성능',
+                level: 'achieved',
+                detail: '번들 사이즈, 로딩 속도, 렌더링 최적화',
+            },
+            {
+                name: '모니터링 / 안정성',
+                level: 'learning',
+                detail: '에러 트래킹, 로깅, 장애 대응 체계',
+            },
+            {
+                name: '문서화 / 온보딩',
+                level: 'experienced',
+                detail: '기술 문서, 온보딩 가이드, ADR',
+            },
+        ],
+    },
+    {
+        id: 'launch',
+        tab: '프로덕트 경험 (출시)',
+        description: '제품을 처음부터 만들어 세상에 내놓는 경험',
+        categories: [
+            {
+                name: '0→1 구축',
+                level: 'achieved',
+                detail: '없는 서비스를 처음부터 만들어 런칭',
+            },
+            {
+                name: 'MVP / 빠른 검증',
+                level: 'learning',
+                detail: '최소 기능으로 시장 반응 확인',
+            },
+            {
+                name: '기술 선정',
+                level: 'achieved',
+                detail: '프로젝트 초기 스택/아키텍처 결정',
+            },
+            {
+                name: '크로스펑셔널 협업',
+                level: 'achieved',
+                detail: '디자이너, PM, 백엔드와 제품 개발',
+            },
+            {
+                name: '일정 관리 / 딜리버리',
+                level: 'achieved',
+                detail: '스코프 조절하며 제때 출시',
+            },
+        ],
+    },
+    {
+        id: 'optimization',
+        tab: '프로덕트 경험 (최적화)',
+        description: '이미 운영 중인 서비스를 더 좋게 만드는 경험',
+        categories: [
+            {
+                name: '지표 기반 개선',
+                level: 'learning',
+                detail: 'DAU, 전환율, 리텐션 등 수치 기반 개선',
+            },
+            {
+                name: 'A/B 테스트',
+                level: 'learning',
+                detail: '실험 설계 및 결과 기반 의사결정',
+            },
+            {
+                name: 'UX 개선',
+                level: 'learning',
+                detail: '피드백/데이터 기반 인터페이스 개선',
+            },
+            {
+                name: '성능 최적화',
+                level: 'achieved',
+                detail: '로딩 속도, Core Web Vitals 개선',
+            },
+            {
+                name: '레거시 개선 / 마이그레이션',
+                level: 'achieved',
+                detail: '기존 코드베이스 점진적 개선',
+            },
+            {
+                name: '확장성 대응',
+                level: 'achieved',
+                detail: '트래픽 증가, 기능 확장 대응 구조 변경',
+            },
+        ],
     },
 ];
