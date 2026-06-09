@@ -120,7 +120,7 @@ export const PROJECTS: IProject[] = [
         title: '상생페이백',
         slug: 'sspb',
         liveUrl: 'https://xn--3h3bl7foc243a8lq.kr/',
-        period: '2025.06 - 현재 (4개월)',
+        period: '2025.06 - 2025.11 (6개월)',
         description:
             '정부가 카드 소비를 촉진하고 소상공인을 지원하기 위해 시행하는 환급(페이백) 제도<br/>2024년 월평균 카드소비액과 비교해서, 2025년 9~11월 동안 카드 소비가 더 많아진 금액의 일부를 디지털 온누리상품권 형태로 돌려주는 사업',
         role: `Frontend Team Lead<br/>
@@ -362,7 +362,7 @@ export const MY_EXPERIENCE = [
     {
         title: 'Frontend Team Lead (Freelance)',
         company: 'Seeroo Info',
-        duration: 'May 2025 - Present',
+        duration: 'May 2025 - Nov 2025',
     },
     {
         title: 'Frontend Developer',
@@ -384,7 +384,7 @@ export const SKILL_MATRIX_LEVELS = {
 
 export interface SkillMatrixCategory {
     id: 'efficiency' | 'launch' | 'optimization';
-    tab: '개발 효율화' | '프로덕트 경험 (출시)' | '프로덕트 경험 (최적화)';
+    tab: '개발 효율화' | '출시 경험' | '최적화 경험';
     description: string;
     categories: {
         name: string;
@@ -406,7 +406,7 @@ export const SKILL_MATRIX_DATA: SkillMatrixCategory[] = [
             },
             {
                 name: '테스트',
-                level: 'learning',
+                level: 'experienced',
                 detail: '유닛 테스트, 통합 테스트, E2E, 자동화',
             },
             {
@@ -443,7 +443,7 @@ export const SKILL_MATRIX_DATA: SkillMatrixCategory[] = [
     },
     {
         id: 'launch',
-        tab: '프로덕트 경험 (출시)',
+        tab: '출시 경험',
         description: '제품을 처음부터 만들어 세상에 내놓는 경험',
         categories: [
             {
@@ -453,7 +453,7 @@ export const SKILL_MATRIX_DATA: SkillMatrixCategory[] = [
             },
             {
                 name: 'MVP / 빠른 검증',
-                level: 'learning',
+                level: 'experienced',
                 detail: '최소 기능으로 시장 반응 확인',
             },
             {
@@ -475,12 +475,12 @@ export const SKILL_MATRIX_DATA: SkillMatrixCategory[] = [
     },
     {
         id: 'optimization',
-        tab: '프로덕트 경험 (최적화)',
+        tab: '최적화 경험',
         description: '이미 운영 중인 서비스를 더 좋게 만드는 경험',
         categories: [
             {
                 name: '지표 기반 개선',
-                level: 'learning',
+                level: 'achieved',
                 detail: 'DAU, 전환율, 리텐션 등 수치 기반 개선',
             },
             {
@@ -490,7 +490,7 @@ export const SKILL_MATRIX_DATA: SkillMatrixCategory[] = [
             },
             {
                 name: 'UX 개선',
-                level: 'learning',
+                level: 'achieved',
                 detail: '피드백/데이터 기반 인터페이스 개선',
             },
             {
