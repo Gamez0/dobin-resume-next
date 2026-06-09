@@ -1,7 +1,6 @@
 'use client';
 import ArrowAnimation from '@/components/ArrowAnimation';
-import Button from '@/components/Button';
-import { GENERAL_INFO } from '@/lib/data';
+import Image from 'next/image';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
@@ -37,62 +36,40 @@ const Banner = () => {
         <section className="relative overflow-hidden" id="banner">
             <ArrowAnimation />
             <div
-                className="container h-[100svh] min-h-[530px] max-md:pb-10 flex justify-between items-center max-md:flex-col"
+                className="container min-h-[50svh] py-16 md:py-20 flex flex-col gap-8"
                 ref={containerRef}
             >
-                <div className="max-md:grow max-md:flex flex-col justify-center items-start max-w-[544px]">
-                    <h1 className="banner-title slide-up-and-fade leading-[.95] text-6xl sm:text-[80px] font-anton">
-                        <span className="text-primary">FRONTEND</span>
-                        <br /> <span className="ml-4">ENGINEER</span>
+                <div className="flex items-center gap-6">
+                    <div className="slide-up-and-fade shrink-0 max-md:hidden">
+                        <Image
+                            src="/profile/me.jpg"
+                            alt="신도빈"
+                            width={160}
+                            height={160}
+                            className="w-40 h-40 rounded-full object-cover border border-border"
+                        />
+                    </div>
+                    <h1 className="banner-title slide-up-and-fade leading-snug text-4xl sm:text-5xl font-medium">
+                        안녕하세요,<br />
+                        프론트엔드 개발자 신도빈입니다.
                     </h1>
-                    <p className="banner-description slide-up-and-fade mt-6 text-lg text-muted-foreground">
-                        Hi! I&apos;m{' '}
-                        <span className="font-medium text-foreground">
-                            Dobin Shin
-                        </span>
-                        . A friendly Frontend Engineer with 4+ years.
-                        <br/>
-                        <span>
-                            I enjoy collaborating with my colleagues to solve user needs.
-                        </span>
-                        
-                    </p>
-                    <Button
-                        as="link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={`https://mail.google.com/mail/?view=cm&fs=1&to=${GENERAL_INFO.email}&su=${GENERAL_INFO.emailSubject}&body=${GENERAL_INFO.emailBody}`}
-                        variant="primary"
-                        className="mt-9 banner-button slide-up-and-fade"
-                    >
-                        Hire Me
-                    </Button>
                 </div>
 
-                <div className="md:absolute bottom-[10%] right-[4%] flex md:flex-col gap-4 md:gap-8 text-center md:text-right">
-                    <div className="slide-up-and-fade">
-                        <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            4+
-                        </h5>
-                        <p className="text-muted-foreground">
-                            Years of Experience
+                <div className="slide-up-and-fade space-y-5">
+                    <div>
+                        <h2 className="text-base font-semibold mb-1.5">코드가 동작하는 것과 문제를 푸는 것은 다르다고 봅니다.</h2>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                            기능을 구현하기 전에 <strong className="text-foreground">유저가 끝까지 해내는지</strong>, <strong className="text-foreground">요구 뒤의 진짜 의도가 뭔지</strong>, <strong className="text-foreground">실제 환경에서 버티는지</strong>부터 확인하고, 그걸 가장 효율적이고 변경에 강한 방법으로 풀어왔습니다.
                         </p>
                     </div>
-                    <div className="slide-up-and-fade">
-                        <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            8+
-                        </h5>
-                        <p className="text-muted-foreground">
-                            Completed Projects
+                    <div>
+                        <h2 className="text-base font-semibold mb-1.5">이상이 아니라 현실을 보고 판단합니다.</h2>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                            <strong className="text-foreground">측정값, 실제 배포 환경, 요구 뒤의 의도</strong>를 직접 확인하고, 거기서 가장 효율적인 길을 고릅니다.
                         </p>
-                    </div>
-                    <div className="slide-up-and-fade">
-                        <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            5K+
-                        </h5>
-                        <p className="text-muted-foreground">Contributed Commits</p>
                     </div>
                 </div>
+
             </div>
         </section>
     );
