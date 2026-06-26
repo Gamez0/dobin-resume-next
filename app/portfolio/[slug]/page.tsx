@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { Fragment } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import type { IPortfolioCodePane, IPortfolioDecision } from '@/types';
-import { PORTFOLIO_CASES } from '@/lib/data';
+import { IPortfolioCodePane, IPortfolioDecision } from '@/types/portfolio';
+import { PORTFOLIO_CASES } from '@/lib/portfolio/data';
 
 /* ── helpers ───────────────────────────────────────────────── */
 

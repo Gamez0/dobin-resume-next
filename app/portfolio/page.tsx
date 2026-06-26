@@ -1,4 +1,4 @@
-import { PORTFOLIO_CASES } from '@/lib/data';
+import { PORTFOLIO_CASES } from '@/lib/portfolio/data';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -128,9 +128,11 @@ export default function PortfolioPage() {
                                 <span className="text-[18px] font-medium tracking-[-0.01em]">
                                     <Arrowed text={c.metric.big} />
                                 </span>
-                                <span className="mt-[7px] block text-xs text-muted-foreground/70">
-                                    <Arrowed text={c.metric.sub} />
-                                </span>
+                                {c.metric.sub && (
+                                    <span className="mt-[7px] block text-xs text-muted-foreground/70">
+                                        <Arrowed text={c.metric.sub} />
+                                    </span>
+                                )}
                             </div>
                         </Link>
                     ))}
