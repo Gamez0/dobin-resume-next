@@ -1,5 +1,3 @@
-import { GENERAL_INFO } from '@/lib/data';
-
 // interface RepoStats {
 //     stargazers_count: number;
 //     forks_count: number;
