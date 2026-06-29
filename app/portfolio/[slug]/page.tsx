@@ -78,11 +78,13 @@ function CodePaneView({ pane }: { pane: IPortfolioCodePane }) {
                     {pane.note}
                 </p>
             )}
-            <pre className="mt-3 overflow-x-auto rounded-xl border border-border bg-card px-[18px] py-4 font-mono text-[13.5px] leading-[1.7] text-[#D7DBDE]">
-                {pane.code.split('\n').map((line, i) => (
-                    <CodeLine key={i} line={line} accent={pane.accent} />
-                ))}
-            </pre>
+            {pane.code && (
+                <pre className="mt-3 overflow-x-auto rounded-xl border border-border bg-card px-[18px] py-4 font-mono text-[13.5px] leading-[1.7] text-[#D7DBDE]">
+                    {pane.code.split('\n').map((line, i) => (
+                        <CodeLine key={i} line={line} accent={pane.accent} />
+                    ))}
+                </pre>
+            )}
         </div>
     );
 }

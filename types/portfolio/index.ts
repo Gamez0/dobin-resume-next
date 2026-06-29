@@ -11,7 +11,7 @@ export interface IPortfolioStat {
 export interface IPortfolioCodePane {
     label: string;
     note?: string; // 이 조각을 설명하는 산문 (코드 위에 표시)
-    code: string;
+    code?: string;
     accent?: string; // 코드 내 이 문자열을 시안색으로 강조
     highlight?: boolean; // 라벨을 시안색으로 (핵심/해결 조각)
 }
