@@ -250,6 +250,11 @@ export default async function CaseStudyPage({
                                     </div>
                                 ))}
                             </div>
+                            {c.resultsNote && (
+                                <p className="mt-5 text-[15px] leading-[1.7] text-muted-foreground">
+                                    {c.resultsNote}
+                                </p>
+                            )}
                         </section>
                     )}
 

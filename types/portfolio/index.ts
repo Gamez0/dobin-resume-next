@@ -49,6 +49,7 @@ export interface IPortfolioCase {
     background: string[];
     decisions: IPortfolioDecision[];
     results: IPortfolioStat[];
+    resultsNote?: string; // 결과 숫자 아래 수미상관 회수 문장
     learning?: {
         quote: string;
         notes?: IPortfolioLearningNote[]; // 태그 블록들 (권장)
