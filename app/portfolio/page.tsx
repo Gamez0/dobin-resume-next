@@ -42,7 +42,7 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 export default function PortfolioPage() {
     // 컨테이너(max-w / px)는 기존 페이지 래퍼에 맞춰 조정.
     return (
-        <div className="mx-auto max-w-[920px] px-8">
+        <div className="mx-auto max-w-[920px] px-8 pb-24">
             {/* ─── Hero ─── */}
             <section className="pb-[70px] pt-24">
                 <Eyebrow>Portfolio · 엔지니어링 케이스 스터디</Eyebrow>

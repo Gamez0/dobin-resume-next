@@ -163,7 +163,7 @@ export default async function CaseStudyPage({
     const next = i < PORTFOLIO_CASES.length - 1 ? PORTFOLIO_CASES[i + 1] : null;
 
     return (
-        <div className="mx-auto max-w-[920px] px-8">
+        <div className="mx-auto max-w-[920px] px-8 pb-24">
             <Link
                 href="/portfolio"
                 className="inline-flex items-center gap-2.5 pt-[34px] font-mono text-[12.5px] text-muted-foreground hover:text-secondary"
