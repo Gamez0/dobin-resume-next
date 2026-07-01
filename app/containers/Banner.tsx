@@ -35,39 +35,63 @@ const Banner = () => {
                     </h1>
                 </div>
 
-                <div className="  space-y-5">
+                <div className="space-y-5">
                     <div>
                         <h2 className="text-base font-semibold mb-1.5">
-                            코드가 동작하는 것과 문제를 푸는 것은 다르다고
-                            봅니다.
+                            데이터 기반으로 판단하고 개선합니다.
                         </h2>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                            기능을 구현하기 전에{' '}
+                            <strong className="text-foreground">측정값</strong>·
                             <strong className="text-foreground">
-                                유저가 끝까지 해내는지
+                                실제 배포 환경
                             </strong>
-                            ,{' '}
+                            ·
                             <strong className="text-foreground">
-                                요구 뒤의 진짜 의도가 뭔지
+                                요구 뒤의 의도
                             </strong>
-                            ,{' '}
-                            <strong className="text-foreground">
-                                실제 환경에서 버티는지
-                            </strong>
-                            부터 확인하고, 그걸 가장 효율적이고 변경에 강한
-                            방법으로 풀어왔습니다.
+                            를 직접 확인하고, 거기서 가장 나은 길을 고릅니다.
                         </p>
                     </div>
                     <div>
                         <h2 className="text-base font-semibold mb-1.5">
-                            이상이 아니라 현실을 보고 판단합니다.
+                            변경에 강한 구조를 설계합니다.
                         </h2>
                         <p className="text-sm text-muted-foreground leading-relaxed">
+                            비즈니스 요구는 계속 바뀝니다. 그걸 전제로,{' '}
                             <strong className="text-foreground">
-                                측정값, 실제 배포 환경, 요구 뒤의 의도
+                                유지보수하기 쉽고 확장 가능한 구조
                             </strong>
-                            를 직접 확인하고, 거기서 가장 효율적인 길을
-                            고릅니다.
+                            를 처음부터 설계합니다.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 className="text-base font-semibold mb-1.5">
+                            대규모 트래픽을 안정적으로 운영합니다.
+                        </h2>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                            전국민 서비스에서 누적{' '}
+                            <strong className="text-foreground">
+                                1,564만 신청
+                            </strong>
+                            ·최대{' '}
+                            <strong className="text-foreground">
+                                600만 MAU
+                            </strong>
+                            를{' '}
+                            <strong className="text-foreground">무중단</strong>
+                            으로 받아냈습니다.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 className="text-base font-semibold mb-1.5">
+                            요구 뒤의 의도를 읽고 가장 잘 실현합니다.
+                        </h2>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                            받은 요구를 그대로 구현하기보다,{' '}
+                            <strong className="text-foreground">
+                                그 뒤의 진짜 목적
+                            </strong>
+                            을 파악해 가장 잘 실현하는 방법을 찾습니다.
                         </p>
                     </div>
                 </div>
