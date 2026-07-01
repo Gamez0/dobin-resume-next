@@ -272,6 +272,9 @@ if (displayData?.canJoinOnline) { /* 비교문 없이 소비 */ }`,
         metric: { big: '6곳 → 1곳', sub: '계산 오차율 0%' },
     },
 
+    // lib/portfolio/data.ts — pozalabs 객체를 아래로 교체하세요.
+    // (배경 + decision ① Lighthouse 까지 반영 / decision ② ISR·결과·배움은 추후 — draft 유지)
+
     {
         slug: 'pozalabs',
         no: '_03.',
@@ -285,10 +288,97 @@ if (displayData?.canJoinOnline) { /* 비교문 없이 소비 */ }`,
             { v: '4배', k: 'CTR' },
             { v: '90–100', k: 'Lighthouse' },
         ],
-        background: [],
-        decisions: [],
+        background: [
+            `포자랩스의 음원 유통 서비스는, 같은 일을 하는 여러 스택이 혼재한 코드를 인계받은 상태였어요 (jQuery·Bootstrap·styled 등이 섞여 있었죠). 이렇게 눈으로 보이는 건 정리하면 되지만, 체감상 느린 원인은 어디인지 분명하지 않았어요. 이런 건 감으로 손대면 엉뚱한 곳을 고치기 쉬워요. 그래서 보이는 건 정리하되, 나머지는 추측 대신 측정으로 진짜 병목부터 찾기로 했어요.`,
+        ],
+        decisions: [
+            {
+                n: '①',
+                title: 'Lighthouse 90~100 · 측정으로 병목을 풀다',
+                rows: [
+                    {
+                        label: '해결',
+                        content:
+                            '추측 대신 도구마다 다른 각도로 측정해 병목을 찾고, 지표별 원인을 하나씩 처리. 인계받은 서비스를 Performance 90점대로, 처음부터 측정을 기준으로 설계한 신규 프로젝트를 100점 근처로',
+                    },
+                ],
+                code: {
+                    tag: '구조 재현 · 회사 코드 아님',
+                    panes: [
+                        {
+                            label: '무엇으로 측정했나',
+                            highlight: true,
+
+                            note: '체감상 느린 걸 추측으로 손대면 엉뚱한 데를 고치기 쉬워요. 그래서 도구마다 다른 각도로 측정했어요. 각 도구가 보는 게 달라서, 겹쳐 보면 "느리다"가 "이 요청이 저걸 막아서 느리다"로 구체화돼요.',
+                            code: `측정 도구             무엇을 보나
+──────────────────────────────────────────────
+Lighthouse           지표 · 종합 진단 (LCP·FCP·CLS)
+WebPageTest          워터폴 — 어떤 요청이 뒤를 막는지
+Chrome Performance   메인 스레드 — 어디서 멈추는지
+React Profiler       불필요한 리렌더 — 어떤 컴포넌트인지`,
+                        },
+                        {
+                            label: 'render-blocking · 304  (워터폴로 발견)',
+                            highlight: true,
+
+                            note: '워터폴을 보니 동기 스크립트가 렌더를 막고 있었어요. 급하지 않은 스크립트는 defer로, 독립적인 건 async로 돌려 차단을 풀었어요. 또 인증 URL이 바뀌며 304를 반복하던 요청이 있었는데 — 304를 만나 다시 요청하는 동안 뒤 리소스까지 막고 있었어요. 바뀐 URL로 정리해 그 재요청을 없앴어요.',
+                            code: `<!-- before: 동기 script가 파싱·렌더를 막음 -->
+<script src="/vendor.js"></script>
+
+<!-- after: 렌더 차단 없이 로드 -->
+<script src="/vendor.js" defer></script>
+<script src="/analytics.js" async></script>`,
+                        },
+                        {
+                            label: '불필요한 리렌더  (React Profiler로 발견)',
+                            highlight: true,
+                            note: 'React Profiler로 불필요하게 리렌더되는 영역을 찾았어요. 전부 최적화하기보다, 리렌더가 잦은 곳을 우선순위로 골라 컴포넌트를 분리했어요 — 재생 상태를 구독하는 부분만 안쪽으로 밀어, 부모와 형제(리스트)는 리렌더되지 않게요.',
+                            code: `// before: 재생 상태가 바뀔 때마다 부모까지 통째로 리렌더
+const Player = () => {
+  const { currentTime } = usePlayback();   // 매 프레임 갱신
+  return (
+    <div>
+      <Waveform time={currentTime} />   {/* 이것만 바뀌면 되는데 */}
+      <TrackList />                     {/* 같이 리렌더됨 */}
+    </div>
+  );
+};
+
+// after: 자주 바뀌는 부분만 분리해 리렌더 범위를 좁힘
+const Player = () => (
+  <div>
+    <WaveformContainer />   {/* 재생 상태 구독은 이 안에서만 */}
+    <TrackList />           {/* 리렌더 안 됨 */}
+  </div>
+);`,
+                        },
+                        {
+                            label: '이미지 · 폰트 로딩  (Lighthouse로 발견)',
+                            highlight: true,
+
+                            note: '이미지·폰트가 늦게 들어오며 화면을 밀어내던 게(reflow·CLS) 있었어요. next/image로 크기를 잡고 포맷을 WebP로 통일했어요. 상단 이미지는 priority로 먼저, 하단은 lazy로 미뤘고, 폰트는 preload로 늦게 바뀌는 문제(FOUT)를 없앴어요.',
+                            code: `// 상단(첫 화면): 먼저 로드
+<Image src={hero} priority alt="..." />
+
+// 하단: 뷰포트에 들어올 때 로드
+<Image src={thumb} loading="lazy" alt="..." />
+
+// 폰트: 미리 받아 늦게 바뀌는 것(FOUT) 방지
+<link rel="preload" href="/fonts/pretendard.woff2"
+      as="font" crossOrigin="" />`,
+                        },
+                        {
+                            label: '그래서 도달한 점수',
+                            highlight: true,
+
+                            note: '이렇게 지표별 병목을 풀어, 인계받은 서비스를 Performance 90점대로 올렸어요. 이 경험으로 "감이 아니라 측정에서 시작한다"가 몸에 뱄고, 이후 새로 시작한 Next.js 프로젝트는 처음부터 측정을 기준으로 설계해 100점에 근접시켰어요.',
+                        },
+                    ],
+                },
+            },
+        ],
         results: [],
         metric: { big: '진입 80%↓', sub: 'CTR 4배 · Lighthouse 90–100' },
-        draft: true,
+        draft: false,
     },
 ];
