@@ -426,9 +426,6 @@ export const getStaticProps = async () => {
                 },
             },
         ],
-        // lib/portfolio/data.ts — pozalabs 객체에서 results: [] 를 아래로 교체하고,
-        // resultsNote + learning 을 추가한 뒤, draft: true 는 제거(또는 false)하세요. (본문 완성)
-
         results: [
             { v: '90–100', k: 'Lighthouse Performance' },
             { v: '80%↓', k: '미리듣기 대기' },
@@ -449,7 +446,6 @@ export const getStaticProps = async () => {
                 },
             ],
         },
-        // draft: true  ← 이 줄을 지우거나 false 로. 본문(배경+①+②+결과+배움) 완성.
         metric: { big: '진입 80%↓', sub: 'CTR 4배 · Lighthouse 90–100' },
         draft: false,
     },
