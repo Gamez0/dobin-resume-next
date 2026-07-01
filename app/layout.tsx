@@ -8,8 +8,7 @@ import Footer from '@/components/Footer';
 import ScrollProgressIndicator from '@/components/ScrollProgressIndicator';
 import ParticleBackground from '@/components/ParticleBackground';
 import Navbar from '@/components/Navbar';
-import CustomCursor from '@/components/CustomCursor';
-import Preloader from '../components/Preloader';
+// import Preloader from '../components/Preloader';
 import StickyEmail from './containers/StickyEmail';
 
 import { Analytics } from '@vercel/analytics/next';
@@ -61,8 +60,8 @@ export default function RootLayout({
                     <main>{children}</main>
                     <Footer />
 
-                    <CustomCursor />
-                    <Preloader />
+                    {/* <CustomCursor /> */}
+                    {/* <Preloader /> */}
                     <ScrollProgressIndicator />
                     <ParticleBackground />
                     <StickyEmail />
